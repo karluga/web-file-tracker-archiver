@@ -156,3 +156,7 @@ The extension configuration is stored in `chrome.storage.local` and mirrored to:
 ```text
 data/config.json
 ```
+
+
+# TO DO
+- Possibly add notifications on screen when the tool detects a new version

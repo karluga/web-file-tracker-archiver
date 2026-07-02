@@ -1,24 +1,10 @@
 # Web File Tracker Archiver
 
-<h2>Made with</h2>
+## Made with
 
-<table>
-  <tr>
-    <td width="72">
-      <video
-        src="https://cdn.openai.com/cap/76B4ISvLjfcSygxIvoMqyl/7d037d99808d419313b42980eb181ecg.mp4"
-        width="56"
-        autoplay
-        loop
-        muted
-        playsinline
-      ></video>
-    </td>
-    <td>
-      <strong>Codex</strong>
-    </td>
-  </tr>
-</table>
+![Codex](https://9to5mac.com/wp-content/uploads/sites/6/2026/05/chatgpt-codex.webp)
+**Codex**
+
 Track website files for any changes, saved locally with time-marked archives
 
 - The Chrome extension owns tracked-site configuration.

@@ -1,6 +1,6 @@
 # Web File Tracker Archiver
 
-A local website asset tracker built from the previous chat idea:
+Track website files for any changes, saved locally with time-marked archives
 
 - The Chrome extension owns tracked-site configuration.
 - The extension detects visits to configured pages and sends matching loaded resources to the local app.

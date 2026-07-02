@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Web File Tracker Archiver",
+  "version": "0.1.0",
+  "description": "Track configured website asset changes and archive changed files through a local Node app.",
+  "permissions": ["activeTab", "storage", "tabs"],
+  "host_permissions": ["<all_urls>", "http://localhost:4177/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Archive Tracker",
+    "default_popup": "popup.html"
+  }
+}

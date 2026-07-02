@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Archive Tracker Options</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <div>
+          <p class="eyebrow">Extension settings</p>
+          <h1>Archive Tracker</h1>
+        </div>
+        <button id="addSite" type="button">Add Site</button>
+      </header>
+
+      <section class="toolbar">
+        <button id="syncConfig" type="button">Sync to Local App</button>
+        <button id="learnCurrent" type="button" class="secondary">Learn from Current Page</button>
+        <span id="status" role="status"></span>
+      </section>
+
+      <section id="sites" class="sites"></section>
+    </main>
+
+    <dialog id="siteDialog">
+      <form id="siteForm" method="dialog">
+        <input id="siteId" type="hidden">
+        <h2 id="dialogTitle">Add Site</h2>
+
+        <label>
+          <span>Name</span>
+          <input id="siteName" required placeholder="Project Restoration">
+        </label>
+
+        <label>
+          <span>Page URL</span>
+          <input id="pageUrl" required type="url" placeholder="https://example.com/index.html">
+        </label>
+
+        <div class="row">
+          <label class="checkbox">
+            <input id="enabled" type="checkbox" checked>
+            <span>Enabled</span>
+          </label>
+
+          <label>
+            <span>Check interval</span>
+            <select id="intervalDays">
+              <option value="0">Every visit</option>
+              <option value="1" selected>Once per day</option>
+              <option value="7">Every 7 days</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          <span>Main file pattern</span>
+          <input id="mainFilePattern" required placeholder="^main\..*\.js$">
+        </label>
+
+        <label>
+          <span>Archive strategy</span>
+          <select id="archiveMode">
+            <option value="full-copy">Full copy when any file changes</option>
+            <option value="main-file">Append files unless main file changes</option>
+          </select>
+        </label>
+
+        <div class="rules-head">
+          <h3>Rules</h3>
+          <button id="addRule" type="button" class="secondary">Add Rule</button>
+        </div>
+        <div id="rules"></div>
+
+        <footer class="dialog-actions">
+          <button id="cancelDialog" type="button" class="secondary">Cancel</button>
+          <button type="submit">Save</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <script src="shared.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

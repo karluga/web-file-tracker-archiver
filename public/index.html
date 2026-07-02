@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web File Tracker Archiver</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Local archive dashboard</p>
+        <h1>Web File Tracker Archiver</h1>
+      </div>
+      <div class="header-actions">
+        <nav class="tabs" aria-label="Dashboard sections">
+          <button id="dashboardTab" type="button" class="tab active" data-tab="dashboard">Dashboard</button>
+          <button id="docsTab" type="button" class="tab" data-tab="docs">Docs</button>
+        </nav>
+        <button id="refreshButton" type="button">Refresh</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="dashboardView" class="layout">
+        <section class="panel">
+          <div class="section-heading">
+            <h2>Tracked Sites</h2>
+            <span id="siteCount" class="pill">0 sites</span>
+          </div>
+          <div id="sites" class="site-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="section-heading">
+            <h2>Recent Activity</h2>
+            <span id="archiveCount" class="pill">0 archived files</span>
+          </div>
+          <div id="events" class="event-list"></div>
+        </section>
+      </div>
+
+      <section id="docsView" class="docs-view hidden">
+        <article id="docs" class="panel docs"></article>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

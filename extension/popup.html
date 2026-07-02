@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Archive Tracker</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Archive Tracker</h1>
+        <span id="connection">Checking</span>
+      </header>
+
+      <section id="sites"></section>
+
+      <footer>
+        <button id="firstArchive" type="button" hidden>First Archive</button>
+        <button id="scanNow" type="button">Scan Now</button>
+        <button id="options" type="button" class="secondary">Options</button>
+        <button id="dashboard" type="button" class="secondary">Dashboard</button>
+      </footer>
+
+      <p id="status"></p>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

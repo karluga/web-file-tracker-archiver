@@ -110,13 +110,13 @@ Each site has a page URL, an interval, and one or more rules.
 Page matching ignores query strings and hashes. For a private or session-specific URL like:
 
 ```text
-https://cdn.project-restoration.com/kongregate.html?DO_NOT_SHARE_THIS_LINK=...
+https://example-website.com/index.html?PRIVATE_QUERY_PARAMETERS=...
 ```
 
 configure only the stable page URL:
 
 ```text
-https://cdn.project-restoration.com/kongregate.html
+https://example-website.com/index.html
 ```
 
 - `folder`: matches resource path prefixes such as `/js/`.
